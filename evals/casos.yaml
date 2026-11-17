@@ -1,20 +1,34 @@
-# Casos de avaliação do agente. Adapte as perguntas ao negócio do seu grupo.
+# Casos de avaliação do agente — Grupo 2, PlugSmart Recharge.
 # ferramenta_esperada: buscar_kb | buscar_web | modelo_press_release | listar_documentos | null
 
-- pergunta: "Qual é o problema que o nosso negócio resolve?"
+# Perguntas sobre o próprio negócio: a resposta está no press release (kb/)
+- pergunta: "Qual problema a PlugSmart Recharge resolve para os motoristas?"
   ferramenta_esperada: buscar_kb
 
-- pergunta: "Quem é o cliente descrito no nosso press release?"
+- pergunta: "Quem define o preço e os horários de cada carregador da rede?"
   ferramenta_esperada: buscar_kb
 
-- pergunta: "Quais empresas já atuam neste mercado no Brasil hoje?"
+- pergunta: "O que o agente de IA da PlugSmart faz durante a recarga?"
+  ferramenta_esperada: buscar_kb
+
+# Perguntas de mercado: a KB não tem, precisa pesquisar
+- pergunta: "Quais empresas operam redes de recarga de carros elétricos no Brasil hoje?"
   ferramenta_esperada: buscar_web
 
-- pergunta: "Quais são as seções que um press release deve ter?"
+- pergunta: "Quantos pontos públicos de recarga existem no Brasil atualmente?"
+  ferramenta_esperada: buscar_web
+
+# Estrutura de documento
+- pergunta: "Quais seções um press release precisa ter?"
   ferramenta_esperada: modelo_press_release
 
-- pergunta: "Quais documentos você tem do nosso grupo?"
+# Inventário da base
+- pergunta: "Quais documentos do nosso grupo você tem na base?"
   ferramenta_esperada: listar_documentos
 
+# Conversa sem necessidade de ferramenta
 - pergunta: "Bom dia!"
+  ferramenta_esperada: null
+
+- pergunta: "Obrigado pela ajuda!"
   ferramenta_esperada: null
